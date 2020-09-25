@@ -1,3 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
 
+body {
+  background-color: #FFF;
+  height: 300vh;
+}
+
+/* 
+================
+Navigation
+================
+*/
+@media (min-width: 100px) {
+  body nav {
+    background: transparent;
+    background: #F1F4FFFF;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  body nav .nav-1 {
+    margin-left: 10px;
+    font-family: "ubuntu", sans-serif;
+  }
+  body nav .nav-1 h1 .fa-jsfiddle {
+    font-size: 35px;
+    margin: 0 5px;
+  }
+  body nav .nav-2 {
+    margin-right: 10px;
+  }
+  body nav .nav-2 .fa-bars {
+    font-size: 28px;
+    border: 2.5px solid #232634;
+    padding: 4px 6px;
+    border-radius: 50%;
+    animation-name: bar-icon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  body nav .nav-2 .fa-bars ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    animation-name: side-transition;
+    animation-duration: 0.2s;
+    display: none;
+    z-index: 100;
+    opacity: 2;
+    background: #F1F4FFFF;
+  }
+  body nav .nav-2 .fa-bars ul li {
+    margin: 15px 0;
+  }
+  body nav .nav-2 .fa-bars ul li a {
+    color: #555;
+    text-transform: uppercase;
+    font-family: "ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  body nav .nav-2 .fa-bars ul li .link:hover {
+    border-bottom: 2px solid #000;
+    color: #000;
+  }
+  body nav .nav-2 .fa-bars ul li .login-btn {
+    color: #FFF;
+    background: #4d5198;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 0 35px;
+  }
+  body nav .nav-2 .fa-bars:hover ul {
+    display: flex;
+  }
+}
+@keyframes bar-icon {
+  0% {
+    color: #232634;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: #555;
+  }
+}
+@media (min-width: 700px) {
+  body header nav .nav-2 .fa-bars {
+    border: none;
+    color: red;
+    margin: -52px;
+  }
+  body header nav .nav-2 .fa-bars ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+  }
+  body header nav .nav-2 .fa-bars ul li a {
+    margin: 0 0 0 30px;
+  }
+
+  @keyframes bar-icon {
+    0% {
+      color: #FCF6F5FF;
+    }
+    50% {
+      color: #FCF6F5FF;
+    }
+    100% {
+      color: #FCF6F5FF;
+    }
+  }
+}
+@keyframes side-transition {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+/*
+================
+End Of Navigation 
+================
+*/
+/*
+==========
+Hero Section
+==========
+*/
+header {
+  width: 100vw;
+}
+header .hero {
+  width: 100%;
+  position: relative;
+}
+header .hero img {
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+header .hero .empty {
+  background: #000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
+}
+header .hero .portfolio section {
+  z-index: 30;
+  color: #FFF;
+  opacity: 1;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 40px;
+  font-family: "ubuntu", sans-serif;
+}
+header .hero .portfolio section h1 {
+  text-shadow: 1px 1px 5px #F8F8F8;
+}
+header .hero .portfolio section button {
+  padding: 15px 40px;
+  font-size: 26px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background: transparent;
+  color: #F33E58;
+  border: 2px solid #F33E58;
+  transition-property: background, color;
+}
+header .hero .portfolio section button:hover {
+  background: #F33E58;
+  color: #FFF;
+  transition: 0.5s;
+  box-shadow: 1px 1px 3px #000;
+}
+
+@media (max-width: 800px) {
+  header .hero .portfolio section {
+    top: 35%;
+  }
+  header .hero .portfolio section h1 {
+    font-size: 30px;
+  }
+  header .hero .portfolio section button {
+    font-size: 20px;
+    padding: 10px 35px;
+  }
+}
+@media (max-width: 480px) {
+  header .hero .portfolio section {
+    top: 25%;
+  }
+  header .hero .portfolio section h1 {
+    font-size: 20px;
+  }
+  header .hero .portfolio section button {
+    font-size: 15px;
+    padding: 8px 25px;
+  }
+}
+/*
+=====================
+End Of hero section
+=====================
+*/
+main #project {
+  text-align: center;
+}
+main #project h1 {
+  font-size: 45px;
+  color: #669DB3FF;
+  text-transform: uppercase;
+  font-family: "ubuntu", sans-serif;
+  margin: 100px 0 10px 0;
+}
 
 /*# sourceMappingURL=style.css.map */

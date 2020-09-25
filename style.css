@@ -220,9 +220,11 @@ main #project {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+main #project .project-1:hover {
+  opacity: 0.85;
+}
 main #project .project-1 {
   background: #F1F4FFFF;
-  border: 0.3px solid #555;
   width: calc(100vw - 60%);
   padding: 10px;
   border-radius: 5px;
@@ -244,11 +246,22 @@ main #project .project-1 button {
   padding: 5px 7px;
   border-radius: 2px;
   text-transform: uppercase;
+  color: #2BAE66FF;
+  z-index: 12;
+  border: 2px solid #2BAE66FF;
+  margin: 15px 0 5px 0;
+  font-family: "ubuntu", sans-serif;
+  background: #F1F4FFFF;
+  transition-property: background, color;
+}
+main #project .project-1 button:hover {
   color: #FFF;
   background: #2BAE66FF;
-  z-index: 12;
-  margin: 5px 0;
-  font-family: "ubuntu", sans-serif;
+  transition: 1s;
+}
+main #project .project-1 button:hover .fa-download {
+  color: #FFF;
+  transition: 1s;
 }
 
 @media (max-width: 500px) {
@@ -271,5 +284,19 @@ main #projects-intro h1 {
   text-transform: uppercase;
   font-family: "ubuntu", sans-serif;
 }
+
+@media (max-width: 800px) {
+  main #projects-intro h1 {
+    font-size: 25px;
+  }
+  main #project .project-1 h4 {
+    font-size: 20px;
+  }
+}
+/*
+================
+Form
+================
+*/
 
 /*# sourceMappingURL=style.css.map */

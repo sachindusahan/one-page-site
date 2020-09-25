@@ -171,13 +171,10 @@ header .hero .portfolio section {
   color: #FFF;
   opacity: 1;
   position: absolute;
-  top: 40%;
-  left: 20%;
+  bottom: 20px;
+  left: 20px;
   font-size: 40px;
   font-family: "ubuntu", sans-serif;
-}
-header .hero .portfolio section h1 {
-  text-shadow: 1px 1px 5px #F8F8F8;
 }
 header .hero .portfolio section button {
   padding: 15px 40px;
@@ -201,27 +198,15 @@ header .hero .portfolio section button:hover {
 }
 
 @media (max-width: 800px) {
-  header .hero .portfolio section {
-    top: 35%;
-  }
-  header .hero .portfolio section h1 {
-    font-size: 30px;
-  }
   header .hero .portfolio section button {
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px 35px;
   }
 }
 @media (max-width: 480px) {
-  header .hero .portfolio section {
-    top: 25%;
-  }
-  header .hero .portfolio section h1 {
-    font-size: 20px;
-  }
   header .hero .portfolio section button {
     font-size: 15px;
-    padding: 8px 25px;
+    padding: 8px 15px;
   }
 }
 /*
@@ -231,13 +216,60 @@ End Of hero section
 */
 main #project {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-main #project h1 {
-  font-size: 45px;
-  color: #669DB3FF;
+main #project .project-1 {
+  background: #F1F4FFFF;
+  border: 0.3px solid #555;
+  width: calc(100vw - 60%);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+main #project .project-1 h4 {
+  color: #2460A7FF;
+  font-size: 25px;
+  z-index: 10;
+  font-family: "ubuntu", sans-serif;
+}
+main #project .project-1 p {
+  font-family: "ubuntu", sans-serif;
+}
+main #project .project-1 button {
+  font-size: 22px;
+  border: none;
+  outline: none;
+  padding: 5px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: #FFF;
+  background: #2BAE66FF;
+  z-index: 12;
+  margin: 5px 0;
+  font-family: "ubuntu", sans-serif;
+}
+
+@media (max-width: 500px) {
+  main #project {
+    flex-wrap: wrap;
+  }
+  main #project .project-1 {
+    min-width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  main #project .project-1 {
+    width: 45%;
+  }
+}
+main #projects-intro h1 {
+  text-align: center;
+  margin: 50px 0 10px 0;
+  font-size: 35px;
   text-transform: uppercase;
   font-family: "ubuntu", sans-serif;
-  margin: 100px 0 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

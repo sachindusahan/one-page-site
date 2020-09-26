@@ -73,7 +73,7 @@ Navigation
     font-weight: 600;
     letter-spacing: 1px;
   }
-  body nav .nav-2 .fa-bars ul li .link:hover {
+  body nav .nav-2 .fa-bars ul li .link:hover, body nav .nav-2 .fa-bars ul li .active {
     border-bottom: 2px solid #000;
     color: #000;
   }
@@ -277,6 +277,18 @@ main #project .project-1 button:hover .fa-download {
     width: 45%;
   }
 }
+main #projects-intro {
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: center;
+}
+main #projects-intro p:first-letter {
+  font-size: 30px;
+  padding-left: 50px;
+}
+main #projects-intro p {
+  color: #555;
+}
 main #projects-intro h1 {
   text-align: center;
   margin: 50px 0 10px 0;
@@ -286,6 +298,9 @@ main #projects-intro h1 {
 }
 
 @media (max-width: 800px) {
+  main #projects-intro {
+    margin: 10px 30px;
+  }
   main #projects-intro h1 {
     font-size: 25px;
   }

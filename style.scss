@@ -14,8 +14,7 @@ $blue: #1A72C2;
 $powder-white: #F1F4FFFF;
 
 body {
-    background-color: #FFF;
-    height: 300vh;
+    background-color: #000;
 }
 
 /* 
@@ -29,7 +28,7 @@ Navigation
     
         nav {
             background: transparent;
-            background: $powder-white;
+            background: $dark;
             height: 70px;
             width: 100vw;
             display: flex;
@@ -42,10 +41,14 @@ Navigation
                 font-family: "ubuntu" , sans-serif;
                 
                 h1 {
-                    .fa-jsfiddle {
+                    .fa-desktop {
                         font-size: 35px;
-                        margin: 0 5px;
+                        margin: 0 10px 0 5px;
+                        color: #1783F6;
                     }
+                    color: #1783F6;
+                    display: flex;
+                    align-items: center;
                 }
             }
             
@@ -74,13 +77,12 @@ Navigation
                         display: none;
                         z-index: 100;
                         opacity: 2;
-                        background: $powder-white;
                         
                         li {
                             margin: 15px 0;
                             
                             a {
-                                color: #555;
+                                color: $dark;
                                 text-transform: uppercase;
                                 font-family: "ubuntu" , sans-serif;
                                 font-size: 20px;
@@ -90,16 +92,16 @@ Navigation
                             }
                             
                             .link:hover,.active {
-                                border-bottom: 2px solid #000;
-                                color: #000;
+                                border-bottom: 2px solid #FFF;
                             }
                             
                             .login-btn {
                                 color: #FFF;
-                                background: #4d5198;
                                 padding: 5px 10px;
-                                border-radius: 3px;
                                 margin: 0 35px;
+                                .fa-cogs {
+                                    font-size: 30px;
+                                }
                             }
                         }
                     }
@@ -108,6 +110,7 @@ Navigation
                 .fa-bars:hover {
                      ul {
                          display: flex;
+                         /*background: #FFF;*/
                         
                      }
                  }
@@ -154,6 +157,7 @@ Navigation
                             
                                 a {
                                     margin: 0 0 0 30px;
+                                    color: #FFF;
                                 }
                             }
                         }
@@ -198,63 +202,6 @@ Hero Section
 ==========
 */
 
-header {
-    width: 100vw;
-    
-    .hero {
-        width: 100%;
-        position: relative;
-        
-        img {
-            background-size: cover;
-            width: 100%;
-            position: relative;
-        }
-        .empty {
-            background: #000;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            z-index: 10;
-            opacity: 0.5;
-        }
-        .portfolio {
-            section {
-                z-index: 30;
-                color: #FFF;
-                opacity: 1;
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
-                font-size: 40px;
-                font-family: "ubuntu" ,sans-serif;
-                
-                
-                button {
-                    padding: 15px 40px;
-                    font-size: 26px;
-                    margin: 10px 0;
-                    text-transform: uppercase;
-                    border-radius: 8px;
-                    border: none;outline: none;
-                    font-weight: 600;
-                    background: transparent;
-                    color: #F33E58;
-                    border: 2px solid #F33E58;
-                    transition-property: background,color;
-                }
-                button:hover {
-                    background: #F33E58;
-                    color: #FFF;
-                    transition: .5s;
-                    box-shadow: 1px 1px 3px #000;
-                }
-            }
-        }
-    }
-}
 @media (max-width: 800px) {
     header {
         .hero {
@@ -300,10 +247,6 @@ main {
         flex-wrap: wrap;
         justify-content: space-evenly;
         
-        .project-1:hover {
-            opacity: 0.85;
-            
-        }
         .project-1 {
             background:$powder-white;
             width: calc(100vw - 60%);
@@ -417,3 +360,41 @@ main {
 Form
 ================
 */
+
+main {
+    form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        h2 {
+            text-transform: uppercase;
+            color: orange;
+            font-family: "Raleway",sans-serif;
+        }
+        input {
+            width: 500px;
+            line-height: 3em;
+            margin: 10px;
+            padding: 0 0 0 10px;
+            border: none;outline:none;
+            border-radius: 4px;
+            border: 2px solid $dark;
+            
+        }
+        a {
+            all: unset;
+            font-size: 20px;
+            padding: 8px 0;
+            background: red;
+            color: $powder-white;
+            border-radius: 3px;
+            text-transform: uppercase;
+            width: 500px;
+            text-align: center;
+            
+        }
+    }
+}
